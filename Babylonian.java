@@ -22,25 +22,28 @@ public class Babylonian
   **/
   
   /**Method to calculate square root
-    * @return void
+    * @return double
     * 
     * */
   
-  public double squareRoot(double x, double acceptableError)
+  public void squareRoot(double x, int acceptableError)
   { 
     double guess = x/2;
-     double error = (guess * guess) -x ;
+    System.out.println(guess);
+     double error =  Math.abs((guess * guess) - x) ;
+     
     if(error <= acceptableError)
     {
-      return guess;
+      System.out.println(guess);
     }
     else
     {
-     double  newGuess = (0.5*(guess + (x/guess)));
+     double newGuess = (0.5*(guess + (x/guess)));
      System.out.println(newGuess);
       squareRoot(newGuess, acceptableError);
     }
-     return guess;
+     System.out.println("The number above me is your closest guess");
+     
   }
       
    
