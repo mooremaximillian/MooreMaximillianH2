@@ -26,23 +26,39 @@ public class Babylonian
     * 
     * */
   
+/**  System.out.println("Please enter the number, and I'll calculate the square root");
+    double number = scanner.nextDouble(); **/
+  
+  //New method for prompt
+  public void prompt()
+  {
+    
+    System.out.println("Please enter the number, and I'll calculate the square root");
+    double number = scanner.nextDouble();
+  
+  }
+    
+  // ERROR: The error variable is subtracted by newGuess instead of the initialGuess, Make another method to call
   public void squareRoot(double x, int acceptableError)
   { 
+    
     double guess = x/2;
-    System.out.println(guess);
-     double error =  Math.abs((guess * guess) - x) ;
-     
+    System.out.println(" This is the guess "  + guess);
+     double error =  Math.abs((guess * guess) - x);
+     System.out.println("The error is " + error);
     if(error <= acceptableError)
     {
-      System.out.println(guess);
+      
+      System.out.println("This is the final " + guess);
     }
     else
     {
-     double newGuess = (0.5*(guess + (x/guess)));
-     System.out.println(newGuess);
+     double newGuess = ((guess + (x/guess)));
+     System.out.println(" This is the new guess " + newGuess);
       squareRoot(newGuess, acceptableError);
     }
-     System.out.println("The number above me is your closest guess");
+    
+     System.out.println("The square root is " + guess);
      
   }
       
