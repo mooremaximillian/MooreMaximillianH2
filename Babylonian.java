@@ -1,17 +1,9 @@
-//imports the scanner class from API
-import java.util.Scanner;
+
 // Class that calculates the Babylonian method
 public class Babylonian
 {
-  // creates an instance of Scanner
-  Scanner scanner = new Scanner(System.in);
-  double number;
+ 
   
-  // constructor method 
-  public Babylonian()
-  {
-    
-  }
   /**
   public void prompt(double x)
   {
@@ -29,17 +21,15 @@ public class Babylonian
 /**  System.out.println("Please enter the number, and I'll calculate the square root");
     double number = scanner.nextDouble(); **/
   
-  //New method for prompt
-  public void prompt()
-  {
-    
-    System.out.println("Please enter the number, and I'll calculate the square root");
-    double number = scanner.nextDouble();
+
   
-  }
+
     
-  // ERROR: The error variable is subtracted by newGuess instead of the initialGuess, Make another method to call
-  public void squareRoot(double x, int acceptableError)
+  /** Square Root method calculates the Square root
+    * @param - the initial number and the acceptable Error
+    **/
+  
+  public void squareRoot(double x, double acceptableError)
   { 
     
     double guess = x/2;

@@ -1,3 +1,5 @@
+/** class to test methods
+  **/ 
 public class main
 {
   public static void main(String [] args)
@@ -5,9 +7,9 @@ public class main
     // creates an instance of the Babylonian class
    
     Babylonian babylonian = new Babylonian();
-    //test's the calculate method of the Babylonian class
+    //test's the squareRoot method
+    babylonian.squareRoot(5,2);
     
-    System.out.println(babylonian.squareRoot(5,.01));
     
   }
 }
